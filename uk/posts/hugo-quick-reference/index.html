@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="uk" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Стислий довідник Hugo |   Блог Сергія Носова</title>
+<meta name="keywords" content="hugo, blog">
+<meta name="description" content="Головні моменти на що треба звернути увагу під час першого використання Hugo.">
+<meta name="author" content="Сергій Носов">
+<link rel="canonical" href="SerhiiNosov.github.io/uk/posts/hugo-quick-reference/">
+<link crossorigin="anonymous" href="SerhiiNosov.github.io/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="SerhiiNosov.github.io/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="SerhiiNosov.github.io/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="SerhiiNosov.github.io/images/favicon.ico">
+<link rel="apple-touch-icon" href="SerhiiNosov.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="SerhiiNosov.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="de" href="SerhiiNosov.github.io/posts/hugo-quick-reference/">
+<link rel="alternate" hreflang="en" href="SerhiiNosov.github.io/en/posts/hugo-quick-reference/">
+<link rel="alternate" hreflang="uk" href="SerhiiNosov.github.io/uk/posts/hugo-quick-reference/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="SerhiiNosov.github.io/uk/posts/hugo-quick-reference/">
+  <meta property="og:site_name" content="  Блог Сергія Носова">
+  <meta property="og:title" content="Стислий довідник Hugo">
+  <meta property="og:description" content="Головні моменти на що треба звернути увагу під час першого використання Hugo.">
+  <meta property="og:locale" content="uk">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-19T23:03:36+02:00">
+    <meta property="article:modified_time" content="2025-06-19T23:03:36+02:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Blog">
+    <meta property="og:image" content="SerhiiNosov.github.io/images/hugo-site.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="SerhiiNosov.github.io/images/hugo-site.png">
+<meta name="twitter:title" content="Стислий довідник Hugo">
+<meta name="twitter:description" content="Головні моменти на що треба звернути увагу під час першого використання Hugo.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Пости",
+      "item": "SerhiiNosov.github.io/uk/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Стислий довідник Hugo",
+      "item": "SerhiiNosov.github.io/uk/posts/hugo-quick-reference/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Стислий довідник Hugo",
+  "name": "Стислий довідник Hugo",
+  "description": "Головні моменти на що треба звернути увагу під час першого використання Hugo.",
+  "keywords": [
+    "hugo", "blog"
+  ],
+  "articleBody": "Вступ Чому генератор статичних сайтів і чому саме Hugo?\nбо це просте рішення, яке працює. Для сайтів візитка або блогів не потрібен складний бекенд. Всі налаштування в одному файлі hugo.toml або hugo.yaml у декларативному стилі, а тому все дуже лаконічно. Формати TOML та YAML настільки прості, що ви зможете налаштувати сайт навіть значно не заглиблюючись в вивчення цих форматів. Для створення контенту не потрібно заглиблюватись в HTML, CSS та JS. Контент створюється в Markdown файлах .md. Формат Markdown значно простіший. В інтернеті вдосталь посібників по синтаксису Markdown. Ось, наприклад тут. Програма Hugo це всього лише один бінарний файл написаний на Go і не має додаткових залежностей. Hugo дуже швидко генерує сайт. Встановлення На сайті Hugo є чудова інструкція з встановлення Hugo для різних операційних систем і різних пакетних менеджерів. Але є один нюанс.\nОпераційні системи на кшталт Debian або MX Linux, орієнтовані на стабільність, тому деякі пакунки в їх репозиторії можуть бути застарілими.\nІ перше що ви зробите після створення проєкту за допомогою Hugo буде встановлення теми сайту. А якщо Hugo буде застарілої версії, значна кількість тем не буде працювати коректно.\nТому для операційних систем на кшталт Debian або MX Linux я раджу завантажити останню стабільну версію Hugo у вигляді .deb файлу з GitHub репозиторію Hugo і встановити її.\nОкрім того, вам знадобиться Git для вашої операційної системи.\nСтворення проєкту Тут все дуже просто. Відкриваєте термінал і запускаєте команду\nhugo new site Hugo створить теку з назвою вашого проєкту зі всіма необхідними файлами й теками всередині, а також файлом налаштувань hugo.toml.\nЩоб Hugo створив проєкт з файлом налаштувань у форматі YAML необхідно виконати таку команду.\nhugo new site --format yaml Деякі шаблони для Hugo на своїх сайтах наводять зразки налаштування теми сайту у форматі YAML, тому у вас може виникнути бажання використовувати саме цей формат.\nВстановлення теми Обрати тему можна на сайті Hugo. Після цього переходите на сторінку теми та слідуєте інструкції з встановлення. Способів встановлення є декілька.\nВарто обрати рекомендований в інструкції.\nНаприклад для теми PeperMod:\nВідкриваємо термінал і переходимо в корінь теки проєкту cd Ініціюємо локальний Git репозиторій git init Встановлюємо тему як підмодуль Git (рекомендований для даної теми спосіб) git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive Далі в файл налаштувань hugo.yaml додаєте рядок theme: [\"PaperMod\"] Налаштування Налаштування для всього сайту знаходяться в файлі hugo.toml або hugo.yaml. (Також є налаштування для кожної сторінки сайту в Markdown файлі. Блок метаданих “front matter” у такому випадку розміщується на початку .md файлу.)\nПараметром baseURL в файлі hugo.yaml задається адреса вашого опублікованого сайту.\nПриміром для запуску сайту локально, налаштування будуть наступні:\nbaseURL: http://localhost:1313 Вже після цього можна згенерувати сайт.\nhugo І запустити локально сервер.\nhugo server # або 'hugo server --baseURL=\"http://localhost:1313/\"' Далі відкриваєте в браузері Ваш сайт за адресою вказаній в налаштуваннях\nhttp://localhost:1313\nНалаштування специфічні для кожної теми задаються параметром - params.\nПараметрів налаштування дуже багато, тому я всі їх описувати не буду. Детальну інформацію можна знайти на сайті Hugo\nТакож на сторінці теми PeperMod є зразок сайту з налаштуваннями для даної теми.\nНаповнення контентом Весь контент зберігається в теці content. Створимо нову сторінку сайту командою\nhugo new content/FirstPage.md Hugo створить файл за шаблоном default.md, який зберігається в теці archetypes.\nДалі редагуєте файл FirstPage.md, заново генеруєте сайт і запускаєте сервер.\nhugo hugo server -D Параметр -D означає “Включіть вміст, позначений як чорновий”. Коли Ви завершите редагування файлу FirstPage.md, в блоці метаданих цього ж файлу “front matter” слід змінити параметр draft.\ndraft: false Після цього сторінка буде відображатись на сайті.\nДодавання зображення Всі зображення зберігаються в теках static або assets.\nЗображення для обкладинки окремої сторінки задається в блоці метаданих .md файлу\ncover: image: cover.png caption: \"Обкладинка сторінки\" Зображення для всього сайту налаштовуються в hugo.yaml\nparams: env: production images: [\"og-default.png\"] cover: hidden: false label: icon: \"logo.svg\" iconHeight: 45 assets: favicon: \"favicon.ico\" favicon16x16: \"favicon.ico\" favicon32x32: \"favicon.ico\" Параметр images задає яке зображення буде використовуватись для обкладинки під час публікації посилання в соціальних мережах. Для того, щоб це налаштування спрацювало потрібно встановити env: production.\nПараметр label задає логотип сайту.\nПараметри favicon, favicon16x16 та favicon32x32 задають іконку сайту на вкладці браузера.\nЗверніть увагу, favicon, favicon16x16 та favicon32x32 треба задати всі обов’язково, навіть якщо зображення одне!\nЗначення параметра hidden: false в налаштуванні -\nparams: cover: hidden: false означає за замовченням показувати зображення обкладинки сторінок. Для окремої сторінки можна вимкнути цю поведінку в .md файлі сторінки.\nПублікація сайту Безплатно опублікувати сайт можна, наприклад на GitHub Pages.\nДля цього на GitHub потрібно створити акаунт з вашим UserName і репозиторій з назвою UserName.github.io.\nЦе потрібно для того, щоб ваш сайт отримав URL - UserName.github.io.\nПісля цього завантажуєте ваш сайт з теки public у Вашому проєкті в цей репозиторій. Це можна зробити декількома способами. Розглянемо варіант з двома репозиторіями.\nСтворюємо один в корені проєкту для вихідного коду.\ncd mywebsite git init # якщо репозиторій ще не ініціалізовано echo \"public/\" \u003e\u003e .gitignore git add . git commit -m \"Initial commit.\" Другий в теці public.\ncd public git init git remote add origin https://github.com/username/username.github.io.git cd .. hugo cd public git add . git commit -m \"Deploy $(date)\" git push origin main --force Важливо --force необхідний, тому що вміст public/ генерується заново при кожному запуску hugo.\nІнший варіант це використовувати один репозиторій для вихідного коду та для публікації сайту.\nУ такому випадку створюють окрему гілку репозиторію для згенерованого коду git checkout -b gh-pages.\nТакож у цьому випадку необхідно в налаштуваннях репозиторію на GitHub Settings -\u003e Pages вказати в розділі Source -\u003e Deploy from a branch гілку gh-pages і теку де знаходиться сайт в цій гілці (/ - це корінь проєкту).\n",
+  "wordCount" : "912",
+  "inLanguage": "uk",
+  "image":"SerhiiNosov.github.io/images/hugo-site.png","datePublished": "2025-06-19T23:03:36+02:00",
+  "dateModified": "2025-06-19T23:03:36+02:00",
+  "author":{
+    "@type": "Person",
+    "name": "Сергій Носов"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "SerhiiNosov.github.io/uk/posts/hugo-quick-reference/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "  Блог Сергія Носова",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "SerhiiNosov.github.io/images/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="SerhiiNosov.github.io/uk/" accesskey="h" title="  Блог Сергія Носова (Alt + H)">
+                <img src="/images/logo.svg" alt="" aria-label="logo"
+                    height="45">  Блог Сергія Носова</a>
+            <div class="logo-switches">
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="SerhiiNosov.github.io/" title="DE 🇩🇪"
+                            aria-label="DE :de:">DE 🇩🇪</a>
+                    </li>
+                    <li>
+                        <a href="SerhiiNosov.github.io/en/" title="EN 🇬🇧"
+                            aria-label="EN :uk:">EN 🇬🇧</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/" title="  Блог Сергія Носова">
+                    <span>Головна</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/posts/" title="Пости">
+                    <span>Пости</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/categories/" title="Категорії">
+                    <span>Категорії</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/tags/" title="Теги">
+                    <span>Теги</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/archives/" title="Архів">
+                    <span>Архів</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/about/" title="Про мене">
+                    <span>Про мене</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/uk/SerhiiNosov.github.io/uk/search/" title="Пошук">
+                    <span>🔍 Пошук</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="SerhiiNosov.github.io/uk/">Головна</a>&nbsp;»&nbsp;<a href="SerhiiNosov.github.io/uk/posts/">Пости</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Стислий довідник Hugo
+    </h1>
+    <div class="post-description">
+      Головні моменти на що треба звернути увагу під час першого використання Hugo.
+    </div>
+    <div class="post-meta"><span title='2025-06-19 23:03:36 +0200 CEST'>червня 19, 2025</span>&nbsp;·&nbsp;5 хвилин&nbsp;·&nbsp;Сергій Носов&nbsp;|&nbsp;Переклади:
+<ul class="i18n_list">
+    <li>
+        <a href="SerhiiNosov.github.io/posts/hugo-quick-reference/">DE 🇩🇪</a>
+    </li>
+    <li>
+        <a href="SerhiiNosov.github.io/en/posts/hugo-quick-reference/">EN 🇬🇧</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="SerhiiNosov.github.io/images/hugo-site.png" alt="*Зображення* [*вебсайту Hugo.*](https://gohugo.io/)">
+        <figcaption><em>Зображення</em> <a href="https://gohugo.io/"><em>вебсайту Hugo.</em></a></figcaption>
+</figure><div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Зміст</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%d0%b2%d1%81%d1%82%d1%83%d0%bf" aria-label="Вступ">Вступ</a></li>
+                <li>
+                    <a href="#%d0%b2%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%bd%d1%8f" aria-label="Встановлення">Встановлення</a></li>
+                <li>
+                    <a href="#%d1%81%d1%82%d0%b2%d0%be%d1%80%d0%b5%d0%bd%d0%bd%d1%8f-%d0%bf%d1%80%d0%be%d1%94%d0%ba%d1%82%d1%83" aria-label="Створення проєкту">Створення проєкту</a></li>
+                <li>
+                    <a href="#%d0%b2%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%bd%d1%8f-%d1%82%d0%b5%d0%bc%d0%b8" aria-label="Встановлення теми">Встановлення теми</a></li>
+                <li>
+                    <a href="#%d0%bd%d0%b0%d0%bb%d0%b0%d1%88%d1%82%d1%83%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f" aria-label="Налаштування">Налаштування</a></li>
+                <li>
+                    <a href="#%d0%bd%d0%b0%d0%bf%d0%be%d0%b2%d0%bd%d0%b5%d0%bd%d0%bd%d1%8f-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%bd%d1%82%d0%be%d0%bc" aria-label="Наповнення контентом">Наповнення контентом</a></li>
+                <li>
+                    <a href="#%d0%b4%d0%be%d0%b4%d0%b0%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f-%d0%b7%d0%be%d0%b1%d1%80%d0%b0%d0%b6%d0%b5%d0%bd%d0%bd%d1%8f" aria-label="Додавання зображення">Додавання зображення</a></li>
+                <li>
+                    <a href="#%d0%bf%d1%83%d0%b1%d0%bb%d1%96%d0%ba%d0%b0%d1%86%d1%96%d1%8f-%d1%81%d0%b0%d0%b9%d1%82%d1%83" aria-label="Публікація сайту">Публікація сайту</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="вступ">Вступ<a hidden class="anchor" aria-hidden="true" href="#вступ">#</a></h1>
+<p>Чому генератор статичних сайтів і чому саме <em>Hugo</em>?</p>
+<ul>
+<li>бо це просте рішення, яке працює. Для сайтів візитка або блогів не потрібен складний бекенд.</li>
+<li>Всі налаштування в одному файлі <code>hugo.toml</code> або <code>hugo.yaml</code> у декларативному стилі, а тому все дуже лаконічно.
+Формати <em>TOML</em> та <em>YAML</em> настільки прості, що ви зможете налаштувати сайт навіть значно не заглиблюючись в вивчення цих форматів.</li>
+<li>Для створення контенту не потрібно заглиблюватись в <em>HTML</em>, <em>CSS</em> та <em>JS</em>.
+Контент створюється в <em>Markdown</em> файлах <code>.md</code>. Формат <em>Markdown</em> значно простіший. В інтернеті вдосталь посібників по синтаксису <em>Markdown</em>. Ось, наприклад <a href="https://www.markdownguide.org/basic-syntax/">тут</a>.</li>
+<li>Програма <em>Hugo</em> це всього лише один бінарний файл написаний на <em>Go</em> і не має додаткових залежностей. <em>Hugo</em> дуже швидко генерує сайт.</li>
+</ul>
+<h1 id="встановлення">Встановлення<a hidden class="anchor" aria-hidden="true" href="#встановлення">#</a></h1>
+<p>На <a href="https://gohugo.io/getting-started/quick-start/">сайті Hugo</a> є чудова інструкція з встановлення <em>Hugo</em>
+для різних операційних систем і різних пакетних менеджерів. Але є один нюанс.<br>
+Операційні системи на кшталт <em>Debian</em> або <em>MX Linux</em>, орієнтовані на стабільність, тому деякі пакунки в їх репозиторії можуть бути застарілими.<br>
+І перше що ви зробите після створення проєкту за допомогою <em>Hugo</em> буде встановлення <a href="https://themes.gohugo.io/">теми сайту</a>.
+А якщо <em>Hugo</em> буде застарілої версії, значна кількість тем не буде працювати коректно.<br>
+Тому для операційних систем на кшталт <em>Debian</em> або <em>MX Linux</em> я раджу завантажити останню стабільну версію <em>Hugo</em> у вигляді <code>.deb</code> файлу з <a href="https://github.com/gohugoio/hugo/releases"><em>GitHub репозиторію Hugo</em></a> і встановити її.<br>
+Окрім того, вам знадобиться <a href="https://git-scm.com/downloads"><em>Git</em></a> для вашої операційної системи.</p>
+<h1 id="створення-проєкту">Створення проєкту<a hidden class="anchor" aria-hidden="true" href="#створення-проєкту">#</a></h1>
+<p>Тут все дуже просто. Відкриваєте термінал і запускаєте команду</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site &lt;ProjectName&gt;
+</span></span></code></pre></div><p><em>Hugo</em> створить теку з назвою вашого проєкту <code>&lt;ProjectName&gt;</code> зі всіма необхідними файлами й теками всередині,
+а також файлом налаштувань <code>hugo.toml</code>.<br>
+Щоб <em>Hugo</em> створив проєкт з файлом налаштувань у форматі <em>YAML</em> необхідно виконати таку команду.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site &lt;ProjectName&gt; --format yaml
+</span></span></code></pre></div><p>Деякі шаблони для <em>Hugo</em> на своїх сайтах наводять зразки налаштування теми сайту у форматі <em>YAML</em>,
+тому у вас може виникнути бажання використовувати саме цей формат.</p>
+<h1 id="встановлення-теми">Встановлення теми<a hidden class="anchor" aria-hidden="true" href="#встановлення-теми">#</a></h1>
+<p>Обрати тему можна на сайті <a href="https://themes.gohugo.io/"><em>Hugo</em></a>. Після цього переходите на сторінку теми та слідуєте інструкції з встановлення.
+Способів встановлення є декілька.<br>
+Варто обрати рекомендований в інструкції.<br>
+Наприклад для теми PeperMod:</p>
+<ol>
+<li>Відкриваємо термінал і переходимо в корінь теки проєкту</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> &lt;ProjectName&gt;
+</span></span></code></pre></div><ol start="2">
+<li>Ініціюємо локальний <em>Git</em> репозиторій</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
+</span></span></code></pre></div><ol start="3">
+<li>Встановлюємо тему як підмодуль <em>Git</em> (рекомендований для даної теми спосіб)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span></code></pre></div><ol start="4">
+<li>Далі в файл налаштувань <code>hugo.yaml</code> додаєте рядок</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;PaperMod&#34;</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><h1 id="налаштування">Налаштування<a hidden class="anchor" aria-hidden="true" href="#налаштування">#</a></h1>
+<p>Налаштування для всього сайту знаходяться в файлі <code>hugo.toml</code> або <code>hugo.yaml</code>. (Також є налаштування для кожної сторінки сайту в <em>Markdown</em> файлі.
+Блок метаданих &ldquo;front matter&rdquo; у такому випадку розміщується на початку <code>.md</code> файлу.)<br>
+Параметром <code>baseURL</code> в файлі <code>hugo.yaml</code> задається адреса вашого опублікованого сайту.<br>
+Приміром для запуску сайту локально, налаштування будуть наступні:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">http://localhost:1313</span><span class="w">
+</span></span></span></code></pre></div><p>Вже після цього можна згенерувати сайт.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></div><p>І запустити локально сервер.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server  <span class="c1"># або &#39;hugo server --baseURL=&#34;http://localhost:1313/&#34;&#39;</span>
+</span></span></code></pre></div><p>Далі відкриваєте в браузері Ваш сайт за адресою вказаній в налаштуваннях<br>
+<a href="http://localhost:1313">http://localhost:1313</a><br>
+Налаштування специфічні для кожної теми задаються параметром - <code>params</code>.<br>
+Параметрів налаштування дуже багато, тому я всі їх описувати не буду. Детальну інформацію можна знайти на <a href="https://gohugo.io/configuration/">сайті <em>Hugo</em></a><br>
+Також на сторінці теми <em>PeperMod</em> є <a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite">зразок сайту</a> з налаштуваннями для даної теми.</p>
+<h1 id="наповнення-контентом">Наповнення контентом<a hidden class="anchor" aria-hidden="true" href="#наповнення-контентом">#</a></h1>
+<p>Весь контент зберігається в теці <code>content</code>. Створимо нову сторінку сайту командою</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new content/FirstPage.md
+</span></span></code></pre></div><p><em>Hugo</em> створить файл за шаблоном <code>default.md</code>, який зберігається в теці <code>archetypes</code>.<br>
+Далі редагуєте файл <code>FirstPage.md</code>, заново генеруєте сайт і запускаєте сервер.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl">hugo server -D
+</span></span></code></pre></div><p>Параметр <code>-D</code> означає &ldquo;Включіть вміст, позначений як чорновий&rdquo;.
+Коли Ви завершите редагування файлу FirstPage.md, в блоці метаданих цього ж файлу &ldquo;front matter&rdquo; слід змінити параметр <code>draft</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><p>Після цього сторінка буде відображатись на сайті.</p>
+<h1 id="додавання-зображення">Додавання зображення<a hidden class="anchor" aria-hidden="true" href="#додавання-зображення">#</a></h1>
+<p>Всі зображення зберігаються в теках <code>static</code> або <code>assets</code>.<br>
+Зображення для обкладинки окремої сторінки задається в блоці метаданих <code>.md</code> файлу</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">cover.png</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Обкладинка сторінки&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>Зображення для всього сайту налаштовуються в <code>hugo.yaml</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">production</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">images</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;og-default.png&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">label</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;logo.svg&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">iconHeight</span><span class="p">:</span><span class="w"> </span><span class="m">45</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">favicon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;favicon.ico&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">favicon16x16</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;favicon.ico&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">favicon32x32</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;favicon.ico&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>Параметр <code>images</code> задає яке зображення буде використовуватись для обкладинки під час публікації посилання в соціальних мережах.
+Для того, щоб це налаштування спрацювало потрібно встановити <code>env: production</code>.<br>
+Параметр <code>label</code> задає логотип сайту.<br>
+Параметри <code>favicon</code>, <code>favicon16x16</code> та <code>favicon32x32</code> задають іконку сайту на вкладці браузера.<br>
+Зверніть увагу, <code>favicon</code>, <code>favicon16x16</code> та <code>favicon32x32</code> треба задати всі обов&rsquo;язково, навіть якщо зображення одне!<br>
+Значення параметра <code>hidden: false</code> в налаштуванні -</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><p>означає за замовченням показувати зображення обкладинки сторінок.
+Для окремої сторінки можна вимкнути цю поведінку в <code>.md</code> файлі сторінки.</p>
+<h1 id="публікація-сайту">Публікація сайту<a hidden class="anchor" aria-hidden="true" href="#публікація-сайту">#</a></h1>
+<p>Безплатно опублікувати сайт можна, наприклад на <em>GitHub Pages</em>.<br>
+Для цього на <a href="https://github.com/"><em>GitHub</em></a> потрібно створити акаунт з вашим <code>UserName</code> і репозиторій з назвою <code>UserName.github.io</code>.<br>
+Це потрібно для того, щоб ваш сайт отримав URL - <code>UserName.github.io</code>.<br>
+Після цього завантажуєте ваш сайт з теки <code>public</code> у Вашому проєкті в цей репозиторій.
+Це можна зробити декількома способами. Розглянемо варіант з двома репозиторіями.<br>
+Створюємо один в корені проєкту для вихідного коду.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> mywebsite
+</span></span><span class="line"><span class="cl">git init <span class="c1"># якщо репозиторій ще не ініціалізовано</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;public/&#34;</span> &gt;&gt; .gitignore
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit.&#34;</span>
+</span></span></code></pre></div><p>Другий в теці <code>public</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/username/username.github.io.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Deploy </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main --force
+</span></span></code></pre></div><p>Важливо <code>--force</code> необхідний, тому що вміст <code>public/</code> генерується заново при кожному запуску <code>hugo</code>.</p>
+<p>Інший варіант це використовувати один репозиторій для вихідного коду та для публікації сайту.<br>
+У такому випадку створюють окрему гілку репозиторію для згенерованого коду <code>git checkout -b gh-pages</code>.<br>
+Також у цьому випадку необхідно в налаштуваннях репозиторію на <em>GitHub</em> <code>Settings -&gt; Pages</code> вказати в розділі <code>Source -&gt; Deploy from a branch</code> гілку <code>gh-pages</code> і теку де знаходиться сайт в цій гілці (/ - це корінь проєкту).</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="SerhiiNosov.github.io/uk/tags/hugo/">Hugo</a></li>
+      <li><a href="SerhiiNosov.github.io/uk/tags/blog/">Blog</a></li>
+    </ul>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on x"
+            href="https://x.com/intent/tweet/?text=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo&amp;url=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f&amp;hashtags=hugo%2cblog">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f&amp;title=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo&amp;summary=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo&amp;source=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on reddit"
+            href="https://reddit.com/submit?url=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f&title=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on whatsapp"
+            href="https://api.whatsapp.com/send?text=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo%20-%20SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on telegram"
+            href="https://telegram.me/share/url?text=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo&amp;url=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Стислий довідник Hugo on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%d0%a1%d1%82%d0%b8%d1%81%d0%bb%d0%b8%d0%b9%20%d0%b4%d0%be%d0%b2%d1%96%d0%b4%d0%bd%d0%b8%d0%ba%20Hugo&u=SerhiiNosov.github.io%2fuk%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="SerhiiNosov.github.io/uk/">  Блог Сергія Носова</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'копіювати';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'скопійовано!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'копіювати';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

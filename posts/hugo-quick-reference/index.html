@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Hugos Kurzanleitung |   Blog von Serhii Nosov</title>
+<meta name="keywords" content="hugo, blog">
+<meta name="description" content="Wichtige Punkte, die Sie bei der ersten Verwendung von Hugo beachten sollten.">
+<meta name="author" content="Serhii Nosov">
+<link rel="canonical" href="SerhiiNosov.github.io/posts/hugo-quick-reference/">
+<link crossorigin="anonymous" href="SerhiiNosov.github.io/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="SerhiiNosov.github.io/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="SerhiiNosov.github.io/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="SerhiiNosov.github.io/images/favicon.ico">
+<link rel="apple-touch-icon" href="SerhiiNosov.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="SerhiiNosov.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="de" href="SerhiiNosov.github.io/posts/hugo-quick-reference/">
+<link rel="alternate" hreflang="en" href="SerhiiNosov.github.io/en/posts/hugo-quick-reference/">
+<link rel="alternate" hreflang="uk" href="SerhiiNosov.github.io/uk/posts/hugo-quick-reference/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="SerhiiNosov.github.io/posts/hugo-quick-reference/">
+  <meta property="og:site_name" content="  Blog von Serhii Nosov">
+  <meta property="og:title" content="Hugos Kurzanleitung">
+  <meta property="og:description" content="Wichtige Punkte, die Sie bei der ersten Verwendung von Hugo beachten sollten.">
+  <meta property="og:locale" content="de">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-19T23:03:36+02:00">
+    <meta property="article:modified_time" content="2025-06-19T23:03:36+02:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Blog">
+    <meta property="og:image" content="SerhiiNosov.github.io/images/hugo-site.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="SerhiiNosov.github.io/images/hugo-site.png">
+<meta name="twitter:title" content="Hugos Kurzanleitung">
+<meta name="twitter:description" content="Wichtige Punkte, die Sie bei der ersten Verwendung von Hugo beachten sollten.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Beiträge",
+      "item": "SerhiiNosov.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Hugos Kurzanleitung",
+      "item": "SerhiiNosov.github.io/posts/hugo-quick-reference/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hugos Kurzanleitung",
+  "name": "Hugos Kurzanleitung",
+  "description": "Wichtige Punkte, die Sie bei der ersten Verwendung von Hugo beachten sollten.",
+  "keywords": [
+    "hugo", "blog"
+  ],
+  "articleBody": "Einführung Warum ein statischer Website-Generator und warum Hugo?\nweil es eine einfache Lösung ist, die funktioniert. Für Visitenkarten-Websites oder Blogs benötigen Sie kein komplexes Backend. Alle Einstellungen in einer Datei hugo.toml oder hugo.yaml in einem deklarativen Stil, sodass alles sehr prägnant ist. Die Formate TOML und YAML sind so einfach, dass Sie eine Site einrichten können, ohne sich mit diesen Formaten befassen zu müssen. Sie müssen sich nicht mit HTML, CSS und JS befassen, um Inhalte zu erstellen. Inhalte werden in .md Markdown-Dateien erstellt. Das Markdown-Format ist deutlich einfacher. Im Internet finden Sie zahlreiche Anleitungen zur Markdown-Syntax. Zum Beispiel hier. Das Programm Hugo ist nur eine einzelne Binärdatei, die in Go geschrieben ist und keine weiteren Abhängigkeiten aufweist. Hugo generiert eine Site sehr schnell. Installation Auf der Hugo-Website finden Sie eine hervorragende Anleitung zur Installation von Hugo für verschiedene Betriebssysteme und verschiedene Paketmanager. Es gibt jedoch einen Vorbehalt.\nBei Betriebssystemen wie Debian oder MX Linux liegt der Schwerpunkt auf Stabilität, daher können einige Pakete in ihren Repositories veraltet sein.\nUnd das Erste, was Sie tun werden, nachdem Sie ein Projekt mit Hugo erstellt haben, ist die Installation eines Site-Designs. Und wenn Hugo eine veraltete Version ist, wird eine beträchtliche Anzahl von Designs nicht richtig funktionieren.\nDaher empfehle ich für Betriebssysteme wie Debian oder MX Linux, die neueste stabile Version von Hugo als .deb-Datei aus dem Hugo GitHub-Repository herunterzuladen und zu installieren.\nZusätzlich benötigen Sie Git für Ihr Betriebssystem.\nEin Projekt erstellen Es ist ganz einfach. Öffnen Sie ein Terminal und führen Sie den Befehl aus\nhugo new site Hugo erstellt einen Ordner mit dem Namen Ihres Projekts mit allen erforderlichen Dateien und Ordnern darin. sowie die Konfigurationsdatei hugo.toml.\nDamit Hugo ein Projekt mit einer Einstellungsdatei im YAML-Format erstellt, müssen Sie den folgenden Befehl ausführen.\nhugo new site --format yaml Einige Vorlagen für Hugo bieten Beispiel-Site-Theme-Einstellungen im YAML-Format auf ihren Websites, Daher möchten Sie möglicherweise dieses Format verwenden.\nInstallieren des Designs Sie können auf der Hugo-Website ein Design auswählen. Rufen Sie anschließend die Designseite auf und folgen Sie den Installationsanweisungen. Es gibt mehrere Installationsmethoden.\nEs lohnt sich, das in der Anleitung empfohlene auszuwählen.\nZum Beispiel für das PeperMod-Thema:\nÖffnen Sie ein Terminal und gehen Sie zum Stammverzeichnis des Projektordners cd Initialisieren Sie ein lokales Git-Repository git init Installieren Sie das Design als Git-Submodul (empfohlene Methode für dieses Design) git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive Fügen Sie als nächstes die Zeile zur Konfigurationsdatei hugo.yaml hinzu theme: [\"PaperMod\"] Einstellungen Die Einstellungen für die gesamte Site befinden sich in der Datei hugo.toml oder hugo.yaml. (Es gibt auch Einstellungen für jede Seite der Site in einer Markdown-Datei.) Der Metadatenblock “front matter” wird in diesem Fall am Anfang der .md-Datei platziert.)\nDer Parameter baseURL in der Datei hugo.yaml gibt die Adresse Ihrer veröffentlichten Site an.\nUm die Site beispielsweise lokal auszuführen, lauten die Einstellungen wie folgt:\nbaseURL: http://localhost:1313 Danach können Sie die Site generieren.\nhugo Und starten Sie den Server lokal.\nhugo server # oder 'hugo server --baseURL=\"http://localhost:1313/\"' Öffnen Sie anschließend Ihre Site im Browser unter der in den Einstellungen angegebenen Adresse.\nhttp://localhost:1313\nDie für jedes Design spezifischen Einstellungen werden durch den Parameter params festgelegt.\nEs gibt viele Konfigurationsmöglichkeiten, daher werde ich nicht alle beschreiben. Detaillierte Informationen finden Sie auf der Hugo-Website.\nAußerdem gibt es auf der PeperMod-Themeseite eine Beispielsite mit Einstellungen für dieses Theme.\nInhaltsfüllung Der gesamte Inhalt wird im Ordner content gespeichert. Erstellen wir eine neue Seite für die Site mit dem Befehl\nhugo new content/FirstPage.md Hugo erstellt eine Datei auf der Grundlage der Vorlage default.md, die im Ordner archetypes gespeichert ist.\nBearbeiten Sie als Nächstes die Datei FirstPage.md, generieren Sie die Site neu und starten Sie den Server.\nhugo hugo server -D Die Option -D bedeutet “Als Entwurf markierten Inhalt einschließen”. Wenn Sie mit der Bearbeitung der Datei FirstPage.md fertig sind, sollten Sie den Parameter draft im Metadatenblock “front matter” derselben Datei ändern.\ndraft: false Danach wird die Seite auf der Website angezeigt.\nHinzufügen eines Bildes Alle Bilder werden in den Ordnern static oder assets gespeichert.\nDas Titelbild für eine einzelne Seite wird im Metadatenblock .md der Datei angegeben.\ncover: image: cover.png caption: \"Seitenumschlag\" Siteweite Bilder werden in hugo.yaml konfiguriert.\nparams: env: production images: [\"og-default.png\"] cover: hidden: false label: icon: \"logo.svg\" iconHeight: 45 assets: favicon: \"favicon.ico\" favicon16x16: \"favicon.ico\" favicon32x32: \"favicon.ico\" Der Parameter images gibt an, welches Bild für das Cover verwendet wird, wenn der Link in sozialen Netzwerken veröffentlicht wird. Damit diese Einstellung funktioniert, müssen Sie env: production festlegen.\nDer Parameter label gibt das Site-Logo an.\nDie Parameter favicon, favicon16x16 und favicon32x32 legen das Site-Symbol im Browser-Tab fest.\nBitte beachten Sie, dass favicon, favicon16x16 und favicon32x32 alle angegeben werden müssen, auch wenn es nur ein Bild gibt!\nDer Wert des Parameters hidden: false in der Konfiguration ist –\nparams: cover: hidden: false bedeutet, dass standardmäßig Seitencoverbilder angezeigt werden. Für eine einzelne Seite können Sie dieses Verhalten in der .md-Datei der Seite deaktivieren.\nWebsite-Veröffentlichung Sie können eine Site kostenlos veröffentlichen, beispielsweise auf GitHub Pages.\nDazu müssen Sie auf GitHub ein Konto mit Ihrem UserName und einem Repository namens UserName.github.io erstellen.\nDies ist erforderlich, damit Ihre Site die URL UserName.github.io erhält.\nLaden Sie anschließend Ihre Site aus dem Ordner public in Ihrem Projekt in dieses Repository hoch. Hierfür gibt es mehrere Möglichkeiten. Betrachten wir die Option mit zwei Repositories.\nWir erstellen eines im Stammverzeichnis des Projekts für den Quellcode.\ncd mywebsite git init # wenn das Repository noch nicht initialisiert ist echo \"public/\" \u003e\u003e .gitignore git add . git commit -m \"Initial commit.\" Der zweite befindet sich im Ordner public.\ncd public git init git remote add origin https://github.com/username/username.github.io.git cd .. hugo cd public git add . git commit -m \"Deploy $(date)\" git push origin main --force Wichtig: --force ist erforderlich, da der Inhalt von public/ bei jeder Ausführung von hugo neu generiert wird.\nEine andere Möglichkeit besteht darin, ein Repository für den Quellcode und zum Veröffentlichen der Site zu verwenden.\nErstellen Sie in diesem Fall einen separaten Repository-Zweig für den generierten Code git checkout -b gh-pages.\nGeben Sie auch in diesem Fall in den Repository-Einstellungen auf GitHub Settings -\u003e Pages im Abschnitt Source -\u003e Deploy from a branch den Zweig gh-pages und den Ordner an, in dem sich die Site in diesem Zweig befindet (/ ist das Stammverzeichnis des Projekts).\n",
+  "wordCount" : "1045",
+  "inLanguage": "de",
+  "image":"SerhiiNosov.github.io/images/hugo-site.png","datePublished": "2025-06-19T23:03:36+02:00",
+  "dateModified": "2025-06-19T23:03:36+02:00",
+  "author":{
+    "@type": "Person",
+    "name": "Serhii Nosov"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "SerhiiNosov.github.io/posts/hugo-quick-reference/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "  Blog von Serhii Nosov",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "SerhiiNosov.github.io/images/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="SerhiiNosov.github.io/" accesskey="h" title="  Blog von Serhii Nosov (Alt + H)">
+                <img src="/images/logo.svg" alt="" aria-label="logo"
+                    height="45">  Blog von Serhii Nosov</a>
+            <div class="logo-switches">
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="SerhiiNosov.github.io/en/" title="EN 🇬🇧"
+                            aria-label="EN :uk:">EN 🇬🇧</a>
+                    </li>
+                    <li>
+                        <a href="SerhiiNosov.github.io/uk/" title="UK 🇺🇦"
+                            aria-label="UK :ukraine:">UK 🇺🇦</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/" title="  Blog von Serhii Nosov">
+                    <span>Startseite</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/posts/" title="Beiträge">
+                    <span>Beiträge</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/categories/" title="Kategorien">
+                    <span>Kategorien</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/tags/" title="Schlagwörter">
+                    <span>Schlagwörter</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/archives/" title="Archiv">
+                    <span>Archiv</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/about/" title="Über mich">
+                    <span>Über mich</span>
+                </a>
+            </li>
+            <li>
+                <a href="SerhiiNosov.github.io/SerhiiNosov.github.io/search/" title="Suche">
+                    <span>🔍 Suche</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="SerhiiNosov.github.io/">Startseite</a>&nbsp;»&nbsp;<a href="SerhiiNosov.github.io/posts/">Beiträge</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Hugos Kurzanleitung
+    </h1>
+    <div class="post-description">
+      Wichtige Punkte, die Sie bei der ersten Verwendung von Hugo beachten sollten.
+    </div>
+    <div class="post-meta"><span title='2025-06-19 23:03:36 +0200 CEST'>Juni 19, 2025</span>&nbsp;·&nbsp;5 Minuten&nbsp;·&nbsp;Serhii Nosov&nbsp;|&nbsp;Übersetzungen:
+<ul class="i18n_list">
+    <li>
+        <a href="SerhiiNosov.github.io/en/posts/hugo-quick-reference/">EN 🇬🇧</a>
+    </li>
+    <li>
+        <a href="SerhiiNosov.github.io/uk/posts/hugo-quick-reference/">UK 🇺🇦</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="SerhiiNosov.github.io/images/hugo-site.png" alt="*Bild* [*der Hugo-Website.*](https://gohugo.io/)">
+        <figcaption><em>Bild</em> <a href="https://gohugo.io/"><em>der Hugo-Website.</em></a></figcaption>
+</figure><div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Inhaltsverzeichnis</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#einf%c3%bchrung" aria-label="Einführung">Einführung</a></li>
+                <li>
+                    <a href="#installation" aria-label="Installation">Installation</a></li>
+                <li>
+                    <a href="#ein-projekt-erstellen" aria-label="Ein Projekt erstellen">Ein Projekt erstellen</a></li>
+                <li>
+                    <a href="#installieren-des-designs" aria-label="Installieren des Designs">Installieren des Designs</a></li>
+                <li>
+                    <a href="#einstellungen" aria-label="Einstellungen">Einstellungen</a></li>
+                <li>
+                    <a href="#inhaltsf%c3%bcllung" aria-label="Inhaltsfüllung">Inhaltsfüllung</a></li>
+                <li>
+                    <a href="#hinzuf%c3%bcgen-eines-bildes" aria-label="Hinzufügen eines Bildes">Hinzufügen eines Bildes</a></li>
+                <li>
+                    <a href="#website-ver%c3%b6ffentlichung" aria-label="Website-Veröffentlichung">Website-Veröffentlichung</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="einführung">Einführung<a hidden class="anchor" aria-hidden="true" href="#einführung">#</a></h1>
+<p>Warum ein statischer Website-Generator und warum <em>Hugo</em>?</p>
+<ul>
+<li>weil es eine einfache Lösung ist, die funktioniert. Für Visitenkarten-Websites oder Blogs benötigen Sie kein komplexes Backend.</li>
+<li>Alle Einstellungen in einer Datei <code>hugo.toml</code> oder <code>hugo.yaml</code> in einem deklarativen Stil, sodass alles sehr prägnant ist.
+Die Formate <em>TOML</em> und <em>YAML</em> sind so einfach, dass Sie eine Site einrichten können, ohne sich mit diesen Formaten befassen zu müssen.</li>
+<li>Sie müssen sich nicht mit <em>HTML</em>, <em>CSS</em> und <em>JS</em> befassen, um Inhalte zu erstellen.
+Inhalte werden in <code>.md</code> <em>Markdown</em>-Dateien erstellt. Das <em>Markdown</em>-Format ist deutlich einfacher. Im Internet finden Sie zahlreiche Anleitungen zur <em>Markdown</em>-Syntax. Zum Beispiel <a href="https://www.markdownguide.org/basic-syntax/">hier</a>.</li>
+<li>Das Programm <em>Hugo</em> ist nur eine einzelne Binärdatei, die in <em>Go</em> geschrieben ist und keine weiteren Abhängigkeiten aufweist. <em>Hugo</em> generiert eine Site sehr schnell.</li>
+</ul>
+<h1 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h1>
+<p>Auf der <a href="https://gohugo.io/getting-started/quick-start/">Hugo-Website</a> finden Sie eine hervorragende Anleitung zur Installation von <em>Hugo</em>
+für verschiedene Betriebssysteme und verschiedene Paketmanager. Es gibt jedoch einen Vorbehalt.<br>
+Bei Betriebssystemen wie <em>Debian</em> oder <em>MX Linux</em> liegt der Schwerpunkt auf Stabilität, daher können einige Pakete in ihren Repositories veraltet sein.<br>
+Und das Erste, was Sie tun werden, nachdem Sie ein Projekt mit <em>Hugo</em> erstellt haben, ist die Installation eines <a href="https://themes.gohugo.io/">Site-Designs</a>.
+Und wenn <em>Hugo</em> eine veraltete Version ist, wird eine beträchtliche Anzahl von Designs nicht richtig funktionieren.<br>
+Daher empfehle ich für Betriebssysteme wie <em>Debian</em> oder <em>MX Linux</em>, die neueste stabile Version von <em>Hugo</em> als <code>.deb</code>-Datei aus dem <a href="https://github.com/gohugoio/hugo/releases"><em>Hugo GitHub-Repository</em></a> herunterzuladen und zu installieren.<br>
+Zusätzlich benötigen Sie <a href="https://git-scm.com/downloads"><em>Git</em></a> für Ihr Betriebssystem.</p>
+<h1 id="ein-projekt-erstellen">Ein Projekt erstellen<a hidden class="anchor" aria-hidden="true" href="#ein-projekt-erstellen">#</a></h1>
+<p>Es ist ganz einfach. Öffnen Sie ein Terminal und führen Sie den Befehl aus</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site &lt;ProjectName&gt;
+</span></span></code></pre></div><p><em>Hugo</em> erstellt einen Ordner mit dem Namen Ihres Projekts <code>&lt;ProjectName&gt;</code> mit allen erforderlichen Dateien und Ordnern darin.
+sowie die Konfigurationsdatei <code>hugo.toml</code>.<br>
+Damit <em>Hugo</em> ein Projekt mit einer Einstellungsdatei im <em>YAML</em>-Format erstellt, müssen Sie den folgenden Befehl ausführen.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site &lt;ProjectName&gt; --format yaml
+</span></span></code></pre></div><p>Einige Vorlagen für <em>Hugo</em> bieten Beispiel-Site-Theme-Einstellungen im <em>YAML</em>-Format auf ihren Websites,
+Daher möchten Sie möglicherweise dieses Format verwenden.</p>
+<h1 id="installieren-des-designs">Installieren des Designs<a hidden class="anchor" aria-hidden="true" href="#installieren-des-designs">#</a></h1>
+<p>Sie können auf der <a href="https://themes.gohugo.io/"><em>Hugo</em></a>-Website ein Design auswählen. Rufen Sie anschließend die Designseite auf und folgen Sie den Installationsanweisungen.
+Es gibt mehrere Installationsmethoden.<br>
+Es lohnt sich, das in der Anleitung empfohlene auszuwählen.<br>
+Zum Beispiel für das PeperMod-Thema:</p>
+<ol>
+<li>Öffnen Sie ein Terminal und gehen Sie zum Stammverzeichnis des Projektordners</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> &lt;ProjectName&gt;
+</span></span></code></pre></div><ol start="2">
+<li>Initialisieren Sie ein lokales <em>Git</em>-Repository</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init
+</span></span></code></pre></div><ol start="3">
+<li>Installieren Sie das Design als <em>Git</em>-Submodul (empfohlene Methode für dieses Design)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span></code></pre></div><ol start="4">
+<li>Fügen Sie als nächstes die Zeile zur Konfigurationsdatei <code>hugo.yaml</code> hinzu</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;PaperMod&#34;</span><span class="p">]</span><span class="w">
+</span></span></span></code></pre></div><h1 id="einstellungen">Einstellungen<a hidden class="anchor" aria-hidden="true" href="#einstellungen">#</a></h1>
+<p>Die Einstellungen für die gesamte Site befinden sich in der Datei <code>hugo.toml</code> oder <code>hugo.yaml</code>. (Es gibt auch Einstellungen für jede Seite der Site in einer <em>Markdown</em>-Datei.)
+Der Metadatenblock &ldquo;front matter&rdquo; wird in diesem Fall am Anfang der <code>.md</code>-Datei platziert.)<br>
+Der Parameter <code>baseURL</code> in der Datei <code>hugo.yaml</code> gibt die Adresse Ihrer veröffentlichten Site an.<br>
+Um die Site beispielsweise lokal auszuführen, lauten die Einstellungen wie folgt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">baseURL</span><span class="p">:</span><span class="w"> </span><span class="l">http://localhost:1313</span><span class="w">
+</span></span></span></code></pre></div><p>Danach können Sie die Site generieren.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></div><p>Und starten Sie den Server lokal.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server  <span class="c1"># oder &#39;hugo server --baseURL=&#34;http://localhost:1313/&#34;&#39;</span>
+</span></span></code></pre></div><p>Öffnen Sie anschließend Ihre Site im Browser unter der in den Einstellungen angegebenen Adresse.<br>
+<a href="http://localhost:1313">http://localhost:1313</a><br>
+Die für jedes Design spezifischen Einstellungen werden durch den Parameter <code>params</code> festgelegt.<br>
+Es gibt viele Konfigurationsmöglichkeiten, daher werde ich nicht alle beschreiben. Detaillierte Informationen finden Sie auf der <a href="https://gohugo.io/configuration/"><em>Hugo</em>-Website</a>.<br>
+Außerdem gibt es auf der <em>PeperMod</em>-Themeseite eine <a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite">Beispielsite</a> mit Einstellungen für dieses Theme.</p>
+<h1 id="inhaltsfüllung">Inhaltsfüllung<a hidden class="anchor" aria-hidden="true" href="#inhaltsfüllung">#</a></h1>
+<p>Der gesamte Inhalt wird im Ordner <code>content</code> gespeichert. Erstellen wir eine neue Seite für die Site mit dem Befehl</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new content/FirstPage.md
+</span></span></code></pre></div><p><em>Hugo</em> erstellt eine Datei auf der Grundlage der Vorlage <code>default.md</code>, die im Ordner <code>archetypes</code> gespeichert ist.<br>
+Bearbeiten Sie als Nächstes die Datei <code>FirstPage.md</code>, generieren Sie die Site neu und starten Sie den Server.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl">hugo server -D
+</span></span></code></pre></div><p>Die Option <code>-D</code> bedeutet &ldquo;Als Entwurf markierten Inhalt einschließen&rdquo;.
+Wenn Sie mit der Bearbeitung der Datei FirstPage.md fertig sind, sollten Sie den Parameter <code>draft</code> im Metadatenblock &ldquo;front matter&rdquo; derselben Datei ändern.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><p>Danach wird die Seite auf der Website angezeigt.</p>
+<h1 id="hinzufügen-eines-bildes">Hinzufügen eines Bildes<a hidden class="anchor" aria-hidden="true" href="#hinzufügen-eines-bildes">#</a></h1>
+<p>Alle Bilder werden in den Ordnern <code>static</code> oder <code>assets</code> gespeichert.<br>
+Das Titelbild für eine einzelne Seite wird im Metadatenblock <code>.md</code> der Datei angegeben.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">cover.png</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Seitenumschlag&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>Siteweite Bilder werden in <code>hugo.yaml</code> konfiguriert.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"> </span><span class="l">production</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">images</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;og-default.png&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">label</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;logo.svg&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">iconHeight</span><span class="p">:</span><span class="w"> </span><span class="m">45</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">assets</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">favicon</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;favicon.ico&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">favicon16x16</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;favicon.ico&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">favicon32x32</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;favicon.ico&#34;</span><span class="w">
+</span></span></span></code></pre></div><p>Der Parameter <code>images</code> gibt an, welches Bild für das Cover verwendet wird, wenn der Link in sozialen Netzwerken veröffentlicht wird.
+Damit diese Einstellung funktioniert, müssen Sie <code>env: production</code> festlegen.<br>
+Der Parameter <code>label</code> gibt das Site-Logo an.<br>
+Die Parameter <code>favicon</code>, <code>favicon16x16</code> und <code>favicon32x32</code> legen das Site-Symbol im Browser-Tab fest.<br>
+Bitte beachten Sie, dass <code>favicon</code>, <code>favicon16x16</code> und <code>favicon32x32</code> alle angegeben werden müssen, auch wenn es nur ein Bild gibt!<br>
+Der Wert des Parameters <code>hidden: false</code> in der Konfiguration ist –</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cover</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hidden</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><p>bedeutet, dass standardmäßig Seitencoverbilder angezeigt werden.
+Für eine einzelne Seite können Sie dieses Verhalten in der <code>.md</code>-Datei der Seite deaktivieren.</p>
+<h1 id="website-veröffentlichung">Website-Veröffentlichung<a hidden class="anchor" aria-hidden="true" href="#website-veröffentlichung">#</a></h1>
+<p>Sie können eine Site kostenlos veröffentlichen, beispielsweise auf <em>GitHub Pages</em>.<br>
+Dazu müssen Sie auf <a href="https://github.com/"><em>GitHub</em></a> ein Konto mit Ihrem <code>UserName</code> und einem Repository namens <code>UserName.github.io</code> erstellen.<br>
+Dies ist erforderlich, damit Ihre Site die URL <code>UserName.github.io</code> erhält.<br>
+Laden Sie anschließend Ihre Site aus dem Ordner <code>public</code> in Ihrem Projekt in dieses Repository hoch.
+Hierfür gibt es mehrere Möglichkeiten. Betrachten wir die Option mit zwei Repositories.<br>
+Wir erstellen eines im Stammverzeichnis des Projekts für den Quellcode.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> mywebsite
+</span></span><span class="line"><span class="cl">git init <span class="c1"># wenn das Repository noch nicht initialisiert ist</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;public/&#34;</span> &gt;&gt; .gitignore
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit.&#34;</span>
+</span></span></code></pre></div><p>Der zweite befindet sich im Ordner <code>public</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/username/username.github.io.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Deploy </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main --force
+</span></span></code></pre></div><p>Wichtig: <code>--force</code> ist erforderlich, da der Inhalt von <code>public/</code> bei jeder Ausführung von <code>hugo</code> neu generiert wird.</p>
+<p>Eine andere Möglichkeit besteht darin, ein Repository für den Quellcode und zum Veröffentlichen der Site zu verwenden.<br>
+Erstellen Sie in diesem Fall einen separaten Repository-Zweig für den generierten Code <code>git checkout -b gh-pages</code>.<br>
+Geben Sie auch in diesem Fall in den Repository-Einstellungen auf <em>GitHub</em> <code>Settings -&gt; Pages</code> im Abschnitt <code>Source -&gt; Deploy from a branch</code> den Zweig <code>gh-pages</code> und den Ordner an, in dem sich die Site in diesem Zweig befindet (/ ist das Stammverzeichnis des Projekts).</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="SerhiiNosov.github.io/tags/hugo/">Hugo</a></li>
+      <li><a href="SerhiiNosov.github.io/tags/blog/">Blog</a></li>
+    </ul>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on x"
+            href="https://x.com/intent/tweet/?text=Hugos%20Kurzanleitung&amp;url=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f&amp;hashtags=hugo%2cblog">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f&amp;title=Hugos%20Kurzanleitung&amp;summary=Hugos%20Kurzanleitung&amp;source=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on reddit"
+            href="https://reddit.com/submit?url=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f&title=Hugos%20Kurzanleitung">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on whatsapp"
+            href="https://api.whatsapp.com/send?text=Hugos%20Kurzanleitung%20-%20SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on telegram"
+            href="https://telegram.me/share/url?text=Hugos%20Kurzanleitung&amp;url=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugos Kurzanleitung on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Hugos%20Kurzanleitung&u=SerhiiNosov.github.io%2fposts%2fhugo-quick-reference%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="SerhiiNosov.github.io/">  Blog von Serhii Nosov</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'Kopieren';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'Kopiert!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'Kopieren';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
