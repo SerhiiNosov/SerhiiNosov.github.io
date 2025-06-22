@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on   Блог Сергія Носова</title>
-    <link>SerhiiNosov.github.io/uk/tags/hugo/</link>
+    <link>https://SerhiiNosov.github.io/uk/tags/hugo/</link>
     <description>Recent content in Hugo on   Блог Сергія Носова</description>
     <image>
       <title>  Блог Сергія Носова</title>
-      <url>SerhiiNosov.github.io/images/og-default.png</url>
-      <link>SerhiiNosov.github.io/images/og-default.png</link>
+      <url>https://SerhiiNosov.github.io/images/og-default.png</url>
+      <link>https://SerhiiNosov.github.io/images/og-default.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
     <language>uk</language>
     <lastBuildDate>Thu, 19 Jun 2025 23:03:36 +0200</lastBuildDate>
-    <atom:link href="SerhiiNosov.github.io/uk/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://SerhiiNosov.github.io/uk/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Стислий довідник Hugo</title>
-      <link>SerhiiNosov.github.io/uk/posts/hugo-quick-reference/</link>
+      <link>https://SerhiiNosov.github.io/uk/posts/hugo-quick-reference/</link>
       <pubDate>Thu, 19 Jun 2025 23:03:36 +0200</pubDate>
-      <guid>SerhiiNosov.github.io/uk/posts/hugo-quick-reference/</guid>
+      <guid>https://SerhiiNosov.github.io/uk/posts/hugo-quick-reference/</guid>
       <description>Головні моменти на що треба звернути увагу під час першого використання Hugo.</description>
     </item>
   </channel>

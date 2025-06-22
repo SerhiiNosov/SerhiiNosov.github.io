@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Schlagwörter on   Blog von Serhii Nosov</title>
-    <link>SerhiiNosov.github.io/tags/</link>
+    <link>https://SerhiiNosov.github.io/tags/</link>
     <description>Recent content in Schlagwörter on   Blog von Serhii Nosov</description>
     <image>
       <title>  Blog von Serhii Nosov</title>
-      <url>SerhiiNosov.github.io/images/og-default.png</url>
-      <link>SerhiiNosov.github.io/images/og-default.png</link>
+      <url>https://SerhiiNosov.github.io/images/og-default.png</url>
+      <link>https://SerhiiNosov.github.io/images/og-default.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
     <language>de</language>
     <lastBuildDate>Thu, 19 Jun 2025 23:03:36 +0200</lastBuildDate>
-    <atom:link href="SerhiiNosov.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://SerhiiNosov.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>SerhiiNosov.github.io/tags/blog/</link>
+      <link>https://SerhiiNosov.github.io/tags/blog/</link>
       <pubDate>Thu, 19 Jun 2025 23:03:36 +0200</pubDate>
-      <guid>SerhiiNosov.github.io/tags/blog/</guid>
+      <guid>https://SerhiiNosov.github.io/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>SerhiiNosov.github.io/tags/hugo/</link>
+      <link>https://SerhiiNosov.github.io/tags/hugo/</link>
       <pubDate>Thu, 19 Jun 2025 23:03:36 +0200</pubDate>
-      <guid>SerhiiNosov.github.io/tags/hugo/</guid>
+      <guid>https://SerhiiNosov.github.io/tags/hugo/</guid>
       <description></description>
     </item>
   </channel>

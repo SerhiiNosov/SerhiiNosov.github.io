@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Technology on   Blog von Serhii Nosov</title>
-    <link>SerhiiNosov.github.io/categories/technology/</link>
+    <link>https://SerhiiNosov.github.io/categories/technology/</link>
     <description>Recent content in Technology on   Blog von Serhii Nosov</description>
     <image>
       <title>  Blog von Serhii Nosov</title>
-      <url>SerhiiNosov.github.io/images/og-default.png</url>
-      <link>SerhiiNosov.github.io/images/og-default.png</link>
+      <url>https://SerhiiNosov.github.io/images/og-default.png</url>
+      <link>https://SerhiiNosov.github.io/images/og-default.png</link>
     </image>
     <generator>Hugo -- 0.147.8</generator>
     <language>de</language>
     <lastBuildDate>Thu, 19 Jun 2025 23:03:36 +0200</lastBuildDate>
-    <atom:link href="SerhiiNosov.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://SerhiiNosov.github.io/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugos Kurzanleitung</title>
-      <link>SerhiiNosov.github.io/posts/hugo-quick-reference/</link>
+      <link>https://SerhiiNosov.github.io/posts/hugo-quick-reference/</link>
       <pubDate>Thu, 19 Jun 2025 23:03:36 +0200</pubDate>
-      <guid>SerhiiNosov.github.io/posts/hugo-quick-reference/</guid>
+      <guid>https://SerhiiNosov.github.io/posts/hugo-quick-reference/</guid>
       <description>Wichtige Punkte, die Sie bei der ersten Verwendung von Hugo beachten sollten.</description>
     </item>
   </channel>
